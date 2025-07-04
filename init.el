@@ -180,7 +180,8 @@
    '("https://emacstil.com/feed.xml"
      "https://sachachua.com/blog/feed/index.xml"
      "https://xkcd.com/rss.xml" "https://sachachua.com/blog/feed/"
-     "https://irreal.org/blog/?feed=rss2"))
+     "https://irreal.org/blog/?feed=rss2"
+     "https://bits.debian.org/feeds/atom.xml"))
  
  '(fountain-export-command-profiles
    '(("afterwriting-usletterpdf-doublespace"
