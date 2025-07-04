@@ -235,7 +235,6 @@
     (fountain-export-command "afterwriting-a4pdf-doublespace"))
   (bind-key "C-c C-e f" #'fritjof-fountain-export 'fountain-mode-map))
 
-
 ;; Tænder for "automatisk opdatering" af filer som bliver ændret i filsystemt, kun for doc-view-mode
 (add-hook 'doc-view-mode-hook 'auto-revert-mode)
 
