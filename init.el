@@ -177,12 +177,11 @@
      default))
  '(doc-view-continuous t)
  '(elfeed-feeds
-   '("https://sachachua.com/blog/feed/index.xml"
-     "https://codelearn.me/feed.xml"
-     "https://www.liberoquotidiano.it/rss.xml"
-     "https://www.dr.dk/nyheder/service/feeds/senestenyt"
+   '("https://emacstil.com/feed.xml"
+     "https://sachachua.com/blog/feed/index.xml"
      "https://xkcd.com/rss.xml" "https://sachachua.com/blog/feed/"
-     "http://www.bluesnews.dk/?feed=rss2"))
+     "https://irreal.org/blog/?feed=rss2"))
+ 
  '(fountain-export-command-profiles
    '(("afterwriting-usletterpdf-doublespace"
       . "afterwriting --source %b --pdf %B.pdf --overwrite --setting double_space_between_scenes=true --setting print_profile=usletter")
@@ -421,8 +420,9 @@
 
 ;; url-liste for newsticker
 (setq newsticker-url-list '(
-  ("stackoverflow.com - emacs" "https://stackoverflow.com/feeds/tag?tagnames=emacs&sort=newest" nil nil nil)
-  ("Chua's Emacs Blog" "https://sachachua.com/blog/feed/index.xml" nil nil nil)))
+	("https://sachachua.com/blog/feed/index.xml" Sascha Chua's Emacs Blog)
+	("https://emacstil.com/feed.xml" Emacs TIL)
+	("https://irreal.org/blog/?feed=rss2" Irreal Blog)))
 
 (defun my/close-newsticker ()
     "Kill all tree-view related buffers."
