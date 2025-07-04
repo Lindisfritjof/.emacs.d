@@ -420,8 +420,9 @@
 ;; for newsticker opførsel (også rss)
 
 ;; url-liste for newsticker
-(setq newsticker-url-list
-      '(("Chua's Emacs Blog" "https://sachachua.com/blog/feed/index.xml" nil nil nil)))
+(setq newsticker-url-list '(
+  ("stackoverflow.com - emacs" "https://stackoverflow.com/feeds/tag?tagnames=emacs&sort=newest" nil nil nil)
+  ("Chua's Emacs Blog" "https://sachachua.com/blog/feed/index.xml" nil nil nil)))
 
 (defun my/close-newsticker ()
     "Kill all tree-view related buffers."
