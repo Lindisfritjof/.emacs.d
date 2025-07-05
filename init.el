@@ -309,8 +309,8 @@
 ;; SMTP-info for protonmail fundet på https://doubleyloop.net/2019/09/06/emacs-mu4e-mbsync-and-protonmail/
 
 ;; setting mu4e to executable path & require
-(add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu4e")
-(setq mu4e-mu-binary "/usr/local/bin/mu")
+(add-to-list 'load-path "/usr/share/emacs/site-lisp/elpa-src/mu4e-1.8.14")
+(setq mu4e-mu-binary "/usr/bin/mu")
 (require 'mu4e)
 
 ;; SMTP from https://doubleloop.net/2019/09/06/emacs-mu4e-mbsync-and-protonmail/
