@@ -228,7 +228,7 @@
 ;; Fountain-mode custom
 ;; C-c C-e f for export
 
-(use-package 'fountain-mode
+(use-package fountain-mode
   :config
   (defun fritjof-fountain-export ()
     (interactive)
