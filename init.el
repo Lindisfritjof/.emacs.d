@@ -135,6 +135,25 @@
 ;; org agenda
 (setq calendar-week-start-day 1)
 
+;; CalDAV - setup
+(require 'org-caldav)
+
+     ;; URL of the caldav server
+     (setq org-caldav-url "https://riversouldiers.dk/remote.php/dav/calendars")
+
+     ;; calendar ID on server
+     (setq org-caldav-calendar-id "fritjof/personal/")
+
+     ;; Org filename where new entries from calendar stored
+     (setq org-caldav-inbox "~/org/kalenderfiler.org")
+
+     ;; Additional Org files to check for calendar events
+     (setq org-caldav-files nil)
+
+     ;; Usually a good idea to set the timezone manually
+     (setq org-icalendar-timezone "Europe/Berlin")
+
+
 ;; org reveal / ox-reveal
 (use-package ox-reveal)
 (require 'ox-reveal)
@@ -177,12 +196,12 @@
      default))
  '(doc-view-continuous t)
  '(elfeed-feeds
-   '("https://emacstil.com/feed.xml"
+   '("https://www.paulgraham.com/rss.html"
+     "https://emacstil.com/feed.xml"
      "https://sachachua.com/blog/feed/index.xml"
      "https://xkcd.com/rss.xml" "https://sachachua.com/blog/feed/"
      "https://irreal.org/blog/?feed=rss2"
      "https://bits.debian.org/feeds/atom.xml"))
- 
  '(fountain-export-command-profiles
    '(("afterwriting-usletterpdf-doublespace"
       . "afterwriting --source %b --pdf %B.pdf --overwrite --setting double_space_between_scenes=true --setting print_profile=usletter")
@@ -207,10 +226,11 @@
 	     jedi-direx latex-unicode-math-mode lisp-butt-mode
 	     lisp-local listen lsp-jedi lsp-mode magit markdown-mode
 	     mu4easy neotree notmuch nov nyan-mode olivetti org org-ai
-	     org-bullets org-download org-edit-latex org-mime
-	     org-present org-tree-slide ox-hugo ox-reveal po-mode
-	     py-autopep8 pyenv-mode pyenv-mode-auto rainbow-delimiters
-	     rainbow-mode slime web-mode writegood-mode writeroom-mode))
+	     org-bullets org-caldav org-download org-edit-latex
+	     org-mime org-present org-tree-slide ox-hugo ox-reveal
+	     po-mode py-autopep8 pyenv-mode pyenv-mode-auto
+	     rainbow-delimiters rainbow-mode slime web-mode
+	     writegood-mode writeroom-mode))
  '(send-mail-function 'mailclient-send-it))
 
 
