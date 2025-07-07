@@ -1,4 +1,4 @@
- ;; dette er init filen til customisering af min emacs.
+;; dette er init filen til customisering af min emacs.
 
 ;; først prøver jeg at sætte shell til bash, fremfor zsh som den ellers insisterer på..
 (setq shell-file-name "/usr/bin/bash")
@@ -120,6 +120,14 @@
  '((python . t)))
 
 ;; SLIME
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(dolist (package '(slime))
+  (unless (package-installed-p package)
+    (package-install package)))
+(require 'slime)
+(slime-setup '(slime-fancy slime-quicklisp slime-asdf slime-mrepl))
+
 ;(load (expand-file-name "~/.quicklisp/slime-helper.el"))
 (setq inferior-lisp-program "sbcl")
 
