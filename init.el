@@ -1,5 +1,6 @@
 ;; dette er init filen til customisering af min emacs.
-
+;; ja-nej prompt ændres til y or n
+(defalias 'yes-or-no-p 'y-or-n-p)
 ;; først prøver jeg at sætte shell til bash, fremfor zsh som den ellers insisterer på..
 (setq shell-file-name "/usr/bin/bash")
 ;; =========== MELPA SUPPORT ===================
@@ -204,7 +205,8 @@
      default))
  '(doc-view-continuous t)
  '(elfeed-feeds
-   '("https://www.paulgraham.com/rss.html"
+   '("https://pluralistic.net/feed/"
+     "https://www.paulgraham.com/rss.html"
      "https://emacstil.com/feed.xml"
      "https://sachachua.com/blog/feed/index.xml"
      "https://xkcd.com/rss.xml" "https://sachachua.com/blog/feed/"
