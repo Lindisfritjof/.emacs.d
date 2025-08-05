@@ -205,7 +205,8 @@
      default))
  '(doc-view-continuous t)
  '(elfeed-feeds
-   '("https://pluralistic.net/feed/"
+   '("https://olddeuteronomy.github.io/index.xml"
+     "https://pluralistic.net/feed/"
      "https://www.paulgraham.com/rss.html"
      "https://emacstil.com/feed.xml"
      "https://sachachua.com/blog/feed/index.xml"
@@ -229,7 +230,7 @@
    '("/home/fritjof/org/blank.org" "/home/fritjof/org/dagbog.org"
      "/home/fritjof/org/noter.org" "/home/fritjof/org/todo.org"))
  '(package-selected-packages
-   '(ac-html all-the-icons company company-jedi counsel darkroom
+   '(ac-html all-the-icons auctex company company-jedi counsel darkroom
 	     dracula-theme elfeed elpy ement emmet-mode erc eww-lnum
 	     flycheck flymd fountain-mode gruvbox-theme htmlize
 	     imenu-list inferior-islisp ipython-shell-send jedi
@@ -314,6 +315,9 @@
 
 ;; e-bøger
 (add-to-list 'auto-mode-alist '("\\.epub\\'" . nov-mode))
+
+;;LaTeX herunder
+(setq +latex-viewers '(pdf-tools))
 
 ;;========= E-POST MED mu4e ================
 ;; SMTP-info for protonmail fundet på https://doubleyloop.net/2019/09/06/emacs-mu4e-mbsync-and-protonmail/
@@ -471,8 +475,6 @@
 ;; ===== Her slutter min egenkonfig af emacs ===
 ;; =============================================
 
-
-
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -483,8 +485,5 @@
 (put 'downcase-region 'disabled nil)
 ; den her er fonts, sat af mig selv:
 (set-face-attribute 'default nil
-		    :family "comic shanns"
-		    :height 125)
-
-
-
+		    :family "Courier Prime Code"
+		    :height 140)
