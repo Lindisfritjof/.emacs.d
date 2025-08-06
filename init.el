@@ -36,6 +36,9 @@
 ; Lav eget navn i titlen
 (setq frame-title-format "Lindisfarne EMACS")
 
+;; Start op i full-screen mode
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+
 ;; Sjov kat der kan noget smart
 (nyan-mode 1)
 
@@ -188,7 +191,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes nil))
+ '(custom-enabled-themes '(dracula))
+ '(custom-safe-themes
+   '("603a831e0f2e466480cdc633ba37a0b1ae3c3e9a4e90183833bc4def3421a961"
+     default)))
 
 
 ;; og her får vi et preview via flymd
