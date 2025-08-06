@@ -188,66 +188,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes nil)
- '(custom-safe-themes
-   '("261a03733c20ebcf26e6f9533359977f3040a9aa10088727893ae4954369eb43"
-     "c20728f5c0cb50972b50c929b004a7496d3f2e2ded387bf870f89da25793bb44"
-     "d2ab3d4f005a9ad4fb789a8f65606c72f30ce9d281a9e42da55f7f4b9ef5bfc6"
-     "daa27dcbe26a280a9425ee90dc7458d85bd540482b93e9fa94d4f43327128077"
-     "d5fd482fcb0fe42e849caba275a01d4925e422963d1cd165565b31d3f4189c87"
-     "18a1d83b4e16993189749494d75e6adb0e15452c80c431aca4a867bcc8890ca9"
-     "5aedf993c7220cbbe66a410334239521d8ba91e1815f6ebde59cecc2355d7757"
-     "75b371fce3c9e6b1482ba10c883e2fb813f2cc1c88be0b8a1099773eb78a7176"
-     "8363207a952efb78e917230f5a4d3326b2916c63237c1f61d7e5fe07def8d378"
-     "51fa6edfd6c8a4defc2681e4c438caf24908854c12ea12a1fbfd4d055a9647a3"
-     "5a0ddbd75929d24f5ef34944d78789c6c3421aa943c15218bac791c199fc897d"
-     "2ad8cb4f6f8509341afb79f6f39636816e8cbf2d42681ff54cae6836b51d7cee"
-     "e3330cd157431235c3f07793fa79c9d131beccd23f03934d3efcb8bb6ac1c8e5"
-     "a22b002b3b0946b8ab8e156b74929ec88252b385c868e1be934631f56535ae1d"
-     "571c36b70f086c01f2b370bfcf32a5249ee2f707202d8def95dc26928b2d90fc"
-     "603a831e0f2e466480cdc633ba37a0b1ae3c3e9a4e90183833bc4def3421a961"
-     default))
- '(doc-view-continuous t)
- '(elfeed-feeds
-   '("https://olddeuteronomy.github.io/index.xml"
-     "https://pluralistic.net/feed/"
-     "https://www.paulgraham.com/rss.html"
-     "https://emacstil.com/feed.xml"
-     "https://sachachua.com/blog/feed/index.xml"
-     "https://xkcd.com/rss.xml" "https://sachachua.com/blog/feed/"
-     "https://irreal.org/blog/?feed=rss2"
-     "https://bits.debian.org/feeds/atom.xml"))
- '(fountain-export-command-profiles
-   '(("afterwriting-usletterpdf-doublespace"
-      . "afterwriting --source %b --pdf %B.pdf --overwrite --setting double_space_between_scenes=true --setting print_profile=usletter")
-     ("afterwriting-a4pdf-doublespace"
-      . "afterwriting --source %b --pdf %B.pdf --overwrite --setting double_space_between_scenes=true --setting print_profile=a4")
-     ("wrap-usletterpdf-cprime"
-      . "wrap pdf %b --use-courier-prime --out %B.pdf")
-     ("make-pdf" . "make %B.pdf")
-     ("screenplain-html" . "screenplain --format html > %B.html")
-     ("textplay-fdx" . "textplay --fdx < %b > %B.fdx")
-     ("wrap-pdf" . "wrap-pdf %b --out %B.pdf && evince %B.pdf")))
- '(initial-frame-alist '((fullscreen . maximized)))
- '(markdown-command "/usr/local/bin/markdown_py")
- '(org-agenda-files
-   '("/home/fritjof/org/blank.org" "/home/fritjof/org/dagbog.org"
-     "/home/fritjof/org/noter.org" "/home/fritjof/org/todo.org"))
- '(package-selected-packages
-   '(ac-html all-the-icons auctex company company-jedi counsel darkroom
-	     dracula-theme elfeed elpy ement emmet-mode erc eww-lnum
-	     flycheck flymd fountain-mode gruvbox-theme htmlize
-	     imenu-list inferior-islisp ipython-shell-send jedi
-	     jedi-direx kanagawa-themes latex-unicode-math-mode
-	     lisp-butt-mode lisp-local listen lsp-jedi lsp-mode magit
-	     markdown-mode melancholy-theme mellow-theme mu4easy
-	     neotree notmuch nov nyan-mode olivetti org org-ai
-	     org-bullets org-caldav org-download org-edit-latex
-	     org-mime org-present org-tree-slide ox-hugo ox-reveal
-	     po-mode py-autopep8 pyenv-mode pyenv-mode-auto
-	     rainbow-delimiters rainbow-mode slime web-mode
-	     writegood-mode writeroom-mode))
- '(send-mail-function 'mailclient-send-it))
+ '(custom-enabled-themes nil))
 
 
 ;; og her får vi et preview via flymd
