@@ -188,9 +188,13 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes '(gruvbox))
+ '(custom-enabled-themes nil)
  '(custom-safe-themes
-   '("d5fd482fcb0fe42e849caba275a01d4925e422963d1cd165565b31d3f4189c87"
+   '("261a03733c20ebcf26e6f9533359977f3040a9aa10088727893ae4954369eb43"
+     "c20728f5c0cb50972b50c929b004a7496d3f2e2ded387bf870f89da25793bb44"
+     "d2ab3d4f005a9ad4fb789a8f65606c72f30ce9d281a9e42da55f7f4b9ef5bfc6"
+     "daa27dcbe26a280a9425ee90dc7458d85bd540482b93e9fa94d4f43327128077"
+     "d5fd482fcb0fe42e849caba275a01d4925e422963d1cd165565b31d3f4189c87"
      "18a1d83b4e16993189749494d75e6adb0e15452c80c431aca4a867bcc8890ca9"
      "5aedf993c7220cbbe66a410334239521d8ba91e1815f6ebde59cecc2355d7757"
      "75b371fce3c9e6b1482ba10c883e2fb813f2cc1c88be0b8a1099773eb78a7176"
@@ -234,9 +238,10 @@
 	     dracula-theme elfeed elpy ement emmet-mode erc eww-lnum
 	     flycheck flymd fountain-mode gruvbox-theme htmlize
 	     imenu-list inferior-islisp ipython-shell-send jedi
-	     jedi-direx latex-unicode-math-mode lisp-butt-mode
-	     lisp-local listen lsp-jedi lsp-mode magit markdown-mode
-	     mu4easy neotree notmuch nov nyan-mode olivetti org org-ai
+	     jedi-direx kanagawa-themes latex-unicode-math-mode
+	     lisp-butt-mode lisp-local listen lsp-jedi lsp-mode magit
+	     markdown-mode melancholy-theme mellow-theme mu4easy
+	     neotree notmuch nov nyan-mode olivetti org org-ai
 	     org-bullets org-caldav org-download org-edit-latex
 	     org-mime org-present org-tree-slide ox-hugo ox-reveal
 	     po-mode py-autopep8 pyenv-mode pyenv-mode-auto
