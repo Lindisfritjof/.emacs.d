@@ -144,6 +144,25 @@
 (setq web-mode-enable-auto-pairing t)
 (add-hook 'html-mode-hook 'web-mode)
 
+;;Here's org-capture
+;;capture todo items using C-c c t                                            
+(define-key global-map (kbd "C-c c") 'org-capture)
+ (setq org-capture-templates
+   '(("t" "Todo" entry
+      (file+olp+datetree "~/org/todo.org")
+      "* TODO %?
+   %i
+   %a")
+     ("n" "noter" entry
+      (file+headline "~/org/noter.org" "Noter")
+      (file "* %T"))
+     ("b" "Bog-noter" entry
+      (file "~/org/bog-noter.org")
+      "* %T")
+     ("d" "Dagbog" entry
+     (file "~/org/dagbog.org")
+      "* %T")))
+
 ;; org agenda
 (setq calendar-week-start-day 1)
 
