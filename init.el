@@ -191,10 +191,29 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes '(dracula))
+ '(custom-enabled-themes '(ef-dream))
  '(custom-safe-themes
-   '("603a831e0f2e466480cdc633ba37a0b1ae3c3e9a4e90183833bc4def3421a961"
-     default)))
+   '("59c36051a521e3ea68dc530ded1c7be169cd19e8873b7994bfc02a216041bf3b"
+     "00d7122017db83578ef6fba39c131efdcb59910f0fac0defbe726da8072a0729"
+     "89c8c4b4d1e5d6c9ede69d16a1668937c0d5902d41346f0ede00998fcfaae4f7"
+     "240d86ced566f99e365cd4d6102e891c79f04df21529a48599626cd09132e720"
+     "603a831e0f2e466480cdc633ba37a0b1ae3c3e9a4e90183833bc4def3421a961"
+     default))
+ '(elfeed-feeds '("https://protesilaos.com/feeds/"))
+ '(package-selected-packages
+   '(ac-html all-the-icons company-jedi counsel cyberpunk-theme darkroom
+	     darktooth-theme dracula-theme ef-themes elfeed elpy ement
+	     emmet-mode erc eww-lnum flycheck flymd fountain-mode
+	     gruvbox-theme imenu-list inferior-islisp
+	     ipython-shell-send jedi-direx kanagawa-themes
+	     latex-unicode-math-mode lisp-butt-mode lisp-local listen
+	     lsp-jedi lsp-python-ms magit melancholy-theme
+	     mellow-theme mu4e mu4e-alert neotree nov nyan-mode
+	     olivetti org-ai org-bullets org-caldav org-download
+	     org-edit-latex org-mime org-msg org-present
+	     org-tree-slide ox-hugo ox-reveal po-mode py-autopep8
+	     pyenv-mode rainbow-delimiters rainbow-mode simple-httpd
+	     slime web-mode writegood-mode writeroom-mode)))
 
 
 ;; og her får vi et preview via flymd
@@ -422,6 +441,8 @@
 
 ;; set eww som default browser
 (setq browse-url-browser-function 'eww-browse-url)
+
+;; set firefox som default browser for reveal.js-præsentationer?
 
 ;; =============================================
 ;; ===== Her slutter min egenkonfig af emacs ===
