@@ -39,7 +39,7 @@
 ;; Start op i full-screen mode
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
-;; Sjov kat der kan noget smart
+;; Sjov kat der kan noget smart med regnbuer
 (nyan-mode 1)
 
 ; fjerner velkomst-skærmen
@@ -184,7 +184,6 @@
      ;; Usually a good idea to set the timezone manually
      (setq org-icalendar-timezone "Europe/Berlin")
 
-
 ;; org reveal / ox-reveal
 (use-package ox-reveal)
 (require 'ox-reveal)
@@ -210,15 +209,19 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes '(ef-dream))
+ '(custom-enabled-themes '(ef-elea-light))
  '(custom-safe-themes
-   '("59c36051a521e3ea68dc530ded1c7be169cd19e8873b7994bfc02a216041bf3b"
+   '("b1791a921c4f38cb966c6f78633364ad880ad9cf36eef01c60982c54ec9dd088"
+     "59c36051a521e3ea68dc530ded1c7be169cd19e8873b7994bfc02a216041bf3b"
      "00d7122017db83578ef6fba39c131efdcb59910f0fac0defbe726da8072a0729"
      "89c8c4b4d1e5d6c9ede69d16a1668937c0d5902d41346f0ede00998fcfaae4f7"
      "240d86ced566f99e365cd4d6102e891c79f04df21529a48599626cd09132e720"
      "603a831e0f2e466480cdc633ba37a0b1ae3c3e9a4e90183833bc4def3421a961"
      default))
- '(elfeed-feeds '("https://protesilaos.com/feeds/"))
+ '(elfeed-feeds
+   '("https://planet.emacslife.com/atom.xml"
+     "https://protesilaos.com/master.xml"
+     "https://protesilaos.com/feeds/"))
  '(package-selected-packages
    '(ac-html all-the-icons company-jedi counsel cyberpunk-theme darkroom
 	     darktooth-theme dracula-theme ef-themes elfeed elpy ement
@@ -447,7 +450,8 @@
 (setq newsticker-url-list '(
 	("https://sachachua.com/blog/feed/index.xml" Sascha Chua's Emacs Blog)
 	("https://emacstil.com/feed.xml" Emacs TIL)
-	("https://irreal.org/blog/?feed=rss2" Irreal Blog)))
+	("https://irreal.org/blog/?feed=rss2" Irreal Blog)
+	("https://protesilaos.com/master.xml" Protesilaos' Blog)))
 
 (defun my/close-newsticker ()
     "Kill all tree-view related buffers."
