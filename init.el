@@ -60,6 +60,10 @@
 (add-hook 'text-mode-hook 'display-line-numbers-mode)
 (add-hook 'markdown-mode-hook 'display-line-numbers-mode)
 
+;; og tids-hook
+(org-clock-agenda-daytime-mode 1)
+(add-hook 'org-mode-hook 'org-clock-agenda-daytime-mode)
+
 ;; ======= SLUT PÅ GENEREL OPFØRSEL I EMACS ===
 
 
@@ -209,7 +213,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes '(ef-elea-light))
+ '(custom-enabled-themes '(ef-autumn))
  '(custom-safe-themes
    '("b1791a921c4f38cb966c6f78633364ad880ad9cf36eef01c60982c54ec9dd088"
      "59c36051a521e3ea68dc530ded1c7be169cd19e8873b7994bfc02a216041bf3b"
@@ -219,7 +223,8 @@
      "603a831e0f2e466480cdc633ba37a0b1ae3c3e9a4e90183833bc4def3421a961"
      default))
  '(elfeed-feeds
-   '("https://planet.emacslife.com/atom.xml"
+   '("https://matrix.org/atom.xml" "https://freely.modspil.dk/feed/"
+     "https://planet.emacslife.com/atom.xml"
      "https://protesilaos.com/master.xml"
      "https://protesilaos.com/feeds/"))
  '(package-selected-packages
@@ -231,11 +236,12 @@
 	     latex-unicode-math-mode lisp-butt-mode lisp-local listen
 	     lsp-jedi lsp-python-ms magit melancholy-theme
 	     mellow-theme mu4e mu4e-alert neotree nov nyan-mode
-	     olivetti org-ai org-bullets org-caldav org-download
-	     org-edit-latex org-mime org-msg org-present
-	     org-tree-slide ox-hugo ox-reveal po-mode py-autopep8
-	     pyenv-mode rainbow-delimiters rainbow-mode simple-httpd
-	     slime web-mode writegood-mode writeroom-mode)))
+	     olivetti org-ai org-bullets org-caldav
+	     org-clock-agenda-daytime-mode org-download org-edit-latex
+	     org-mime org-msg org-present org-tree-slide ox-hugo
+	     ox-reveal po-mode py-autopep8 pyenv-mode
+	     rainbow-delimiters rainbow-mode simple-httpd slime
+	     web-mode writegood-mode writeroom-mode)))
 
 
 ;; og her får vi et preview via flymd
@@ -443,7 +449,9 @@
 
 ```el
 (global-set-key (kbd "C-x w") 'elfeed)
+(global-set-key (kbd "C-c C-z") 'elfeed-update)
 ```
+
 ;; for newsticker opførsel (også rss)
 
 ;; url-liste for newsticker
