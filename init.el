@@ -193,6 +193,19 @@
 (use-package ox-reveal)
 (require 'ox-reveal)
 
+;; ERC/IRC customizing herunder
+(require 'erc)
+ (add-hook 'erc-mode-hook 'erc-nickbar-mode)
+(setq erc-server "irc.libera.chat"
+      erc-nick "fritjof"    ; Change this!
+      erc-user-full-name "Øjvind Fritjof"  ; And this!
+      erc-track-shorten-start 8
+      erc-autojoin-channels-alist '(("irc.libera.chat" "#mlug" "#systemcrafters" "#emacs"))
+      erc-kill-buffer-on-part t
+      erc-auto-query 'bury)
+ ;; ERC/IRC customizing slut
+ 
+
 ;; ======= SKRIVESMUKKESERING ================
 ;; og så laver vi olivetti-mode til .txt-filer
 (add-hook 'fountain-mode-hook 'olivetti-mode)
@@ -208,54 +221,8 @@
   :mode ("README\\.md\\'" . gfm-mode)
   :init (setq markdown-command "multimarkdown")
   :bind (:map markdown-mode-map
-              ("C-c C-e" . markdown-do)))
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-enabled-themes '(ef-autumn))
- '(custom-safe-themes
-   '("b1791a921c4f38cb966c6f78633364ad880ad9cf36eef01c60982c54ec9dd088"
-     "59c36051a521e3ea68dc530ded1c7be169cd19e8873b7994bfc02a216041bf3b"
-     "00d7122017db83578ef6fba39c131efdcb59910f0fac0defbe726da8072a0729"
-     "89c8c4b4d1e5d6c9ede69d16a1668937c0d5902d41346f0ede00998fcfaae4f7"
-     "240d86ced566f99e365cd4d6102e891c79f04df21529a48599626cd09132e720"
-     "603a831e0f2e466480cdc633ba37a0b1ae3c3e9a4e90183833bc4def3421a961"
-     default))
- '(elfeed-feeds
-   '("https://matrix.org/atom.xml" "https://freely.modspil.dk/feed/"
-     "https://planet.emacslife.com/atom.xml"
-     "https://protesilaos.com/master.xml"
-     "https://protesilaos.com/feeds/"))
 
- ;; ERC/IRC customizing herunder
- (setq erc-server "irc.libera.chat"
-      erc-nick "fritjof"    ; Change this!
-      erc-user-full-name "Øjvind Fritjof"  ; And this!
-      erc-track-shorten-start 8
-      erc-autojoin-channels-alist '(("irc.libera.chat" "#mlug" "#systemcrafters" "#emacs"))
-      erc-kill-buffer-on-part t
-      erc-auto-query 'bury)
- (require 'erc)
- (add-hook 'erc-mode-hook 'erc-nickbar-mode)
-;; ERC/IRC customizing slut
- 
-'(package-selected-packages
-   '(ac-html all-the-icons company-jedi counsel cyberpunk-theme darkroom
-	     darktooth-theme dracula-theme ef-themes elfeed elpy ement
-	     emmet-mode erc eww-lnum flycheck flymd fountain-mode
-	     gruvbox-theme imenu-list inferior-islisp
-	     ipython-shell-send jedi-direx kanagawa-themes
-	     latex-unicode-math-mode lisp-butt-mode lisp-local listen
-	     lsp-jedi lsp-python-ms magit melancholy-theme
-	     mellow-theme mu4e mu4e-alert neotree nov nyan-mode
-	     olivetti org-ai org-bullets org-caldav
-	     org-clock-agenda-daytime-mode org-download org-edit-latex
-	     org-mime org-msg org-present org-tree-slide ox-hugo
-	     ox-reveal po-mode py-autopep8 pyenv-mode
-	     rainbow-delimiters rainbow-mode simple-httpd slime
-	     web-mode writegood-mode writeroom-mode)))
+              ("C-c C-e" . markdown-do)))
 
 
 ;; og her får vi et preview via flymd
@@ -357,7 +324,8 @@
                                              "https://www.fritjofarnfred.dk"))
 ;; Get mail
 (setq mu4e-get-mail-command "mbsync protonmail"
-    mu4e-change-filenames-when-moving t   ; needed for mbsync
+    mu4e-change-fil
+enames-when-moving t   ; needed for mbsync
     mu4e-update-interval 120)             ; update every 2 minutes
 
 ;; send med MSMTP
@@ -492,6 +460,45 @@
 ;; =============================================
 ;; ===== Her slutter min egenkonfig af emacs ===
 ;; =============================================
+
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-enabled-themes '(ef-autumn))
+ '(custom-safe-themes
+   '("b1791a921c4f38cb966c6f78633364ad880ad9cf36eef01c60982c54ec9dd088"
+     "59c36051a521e3ea68dc530ded1c7be169cd19e8873b7994bfc02a216041bf3b"
+     "00d7122017db83578ef6fba39c131efdcb59910f0fac0defbe726da8072a0729"
+     "89c8c4b4d1e5d6c9ede69d16a1668937c0d5902d41346f0ede00998fcfaae4f7"
+     "240d86ced566f99e365cd4d6102e891c79f04df21529a48599626cd09132e720"
+     "603a831e0f2e466480cdc633ba37a0b1ae3c3e9a4e90183833bc4def3421a961"
+     default))
+ '(elfeed-feeds
+   '("https://matrix.org/atom.xml" "https://freely.modspil.dk/feed/"
+     "https://planet.emacslife.com/atom.xml"
+     "https://protesilaos.com/master.xml"
+     "https://protesilaos.com/feeds/"))
+
+ 
+'(package-selected-packages
+   '(ac-html all-the-icons company-jedi counsel cyberpunk-theme darkroom
+	     darktooth-theme dracula-theme ef-themes elfeed elpy ement
+	     emmet-mode erc eww-lnum flycheck flymd fountain-mode
+	     gruvbox-theme imenu-list inferior-islisp
+	     ipython-shell-send jedi-direx kanagawa-themes
+	     latex-unicode-math-mode lisp-butt-mode lisp-local listen
+	     lsp-jedi lsp-python-ms magit melancholy-theme
+	     mellow-theme mu4e mu4e-alert neotree nov nyan-mode
+	     olivetti org-ai org-bullets org-caldav
+	     org-clock-agenda-daytime-mode org-download org-edit-latex
+	     org-mime org-msg org-present org-tree-slide ox-hugo
+	     ox-reveal po-mode py-autopep8 pyenv-mode
+	     rainbow-delimiters rainbow-mode simple-httpd slime
+	     web-mode writegood-mode writeroom-mode)))
+
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
