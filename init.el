@@ -1,6 +1,7 @@
 ;; dette er init filen til customisering af min emacs.
 ;; ja-nej prompt ændres til y or n
 (defalias 'yes-or-no-p 'y-or-n-p)
+
 ;; først prøver jeg at sætte shell til bash, fremfor zsh som den ellers insisterer på..
 (setq shell-file-name "/usr/bin/bash")
 ;; =========== MELPA SUPPORT ===================
@@ -227,7 +228,20 @@
      "https://planet.emacslife.com/atom.xml"
      "https://protesilaos.com/master.xml"
      "https://protesilaos.com/feeds/"))
- '(package-selected-packages
+
+ ;; ERC/IRC customizing herunder
+ (setq erc-server "irc.libera.chat"
+      erc-nick "fritjof"    ; Change this!
+      erc-user-full-name "Øjvind Fritjof"  ; And this!
+      erc-track-shorten-start 8
+      erc-autojoin-channels-alist '(("irc.libera.chat" "#mlug" "#systemcrafters" "#emacs"))
+      erc-kill-buffer-on-part t
+      erc-auto-query 'bury)
+ (require 'erc)
+ (add-hook 'erc-mode-hook 'erc-nickbar-mode)
+;; ERC/IRC customizing slut
+ 
+'(package-selected-packages
    '(ac-html all-the-icons company-jedi counsel cyberpunk-theme darkroom
 	     darktooth-theme dracula-theme ef-themes elfeed elpy ement
 	     emmet-mode erc eww-lnum flycheck flymd fountain-mode
@@ -339,7 +353,7 @@
                 (setq mu4e-compose-signature  (concat
 					     "Venlig hilsen/Kind regards\n"
                                              "Øjvind Fritjof Arnfred\n"
-					     "+45 29 65 28 52\n"
+					     "+45 29 65 28 42\n"
                                              "https://www.fritjofarnfred.dk"))
 ;; Get mail
 (setq mu4e-get-mail-command "mbsync protonmail"
