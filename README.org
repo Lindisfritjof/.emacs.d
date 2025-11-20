@@ -1,5 +1,7 @@
 * This is my init.el-repository
 
+I now lives on codeberg.org
+
 This is where I try to keep track of my tinkering with Emacs.
 
 I have very few, but to me useful, snippets, so I'll be keeping this in one large file.
